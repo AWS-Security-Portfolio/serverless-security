@@ -35,7 +35,7 @@ In this lab, you built a secure serverless application on AWS using Lambda, API 
 
 ## Diagram
 
-insert here
+![Architecture Diagram](diagram.png)
 
 ---
 
