@@ -89,6 +89,8 @@ In this lab, you built a secure serverless application on AWS using Lambda, API 
 
 ## Screenshots
 
+*All screenshots are included in the screenshots/ folder.
+
 | Step | Filename                       | Description                                                       |
 | ---- | ------------------------------ | ----------------------------------------------------------------- |
 | 1    | dynamodb-table-created.png     | DynamoDB table creation with partition key configuration          |
