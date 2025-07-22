@@ -12,16 +12,14 @@ Secure Serverless Application with Lambda, API Gateway, Cognito and WAF.
 - [Diagram]
 - [Objectives]
 - [Steps Performed]
-  - [1. Created DynamoDB Table]
-  - [2. Developed Lambda Function]
-  - [3. Configured API Gateway]
-  - [4. Set Up Cognito User Pool and App Client]
-  - [5. Attached Cognito JWT Authorizer to API Gateway]
-  - [6. Configured AWS WAF Web ACL]
-  - [7. Scoped IAM Roles]
-  - [8. Generated Cognito Tokens with AWS CLI]
-  - [9. Tested API Calls with Postman]
-  - [10. Cleanup]
+  - [1. API Gateway Setup]
+  - [2. Cognito User Pool Setup]
+  - [3. Cognito Authorizer Configuration]
+  - [4. Lambda Function and IAM Policy]
+  - [5. DynamoDB Table Creation]
+  - [6. Authorization Testing]
+  - [7. AWS WAS Limitation Notice]
+  - [8. Cleanup]
 - [Screenshots]
 - [Known Limitations]
 - [Lessons Learned]
@@ -73,47 +71,32 @@ In modern cloud applications, securing serverless APIs is critical to prevent un
 
 ## Steps Performed
 
-1. Created DynamoDB Table
-   - Set up a DynamoDB table named Lab8Items with a partition key id of type String to store items securely.
+1. API Gateway Setup
+   - Created a REST API named Lab8Api with routes /items supporting GET and POST methods (Screenshot: apigateway-routes.png).
+   - Configured the API Gateway stage for deployment and obtained the stage URL (Screenshot: apigateway-stage-url.png).
 
-2. Developed Lambda Function
-   - Wrote Python code to handle POST and GET methods, allowing adding and retrieving items.
-   - Implemented basic input validation to prevent invalid data.
+2. Cognito User Pool Setup
+   - Created a Cognito user pool for authentication and user management (Screenshot: cognito-userpool.png).
 
-3. Configured API Gateway
-   - Created REST API named Lab8Api.
-   - Defined /items resource with GET and POST routes integrated with Lambda function.
+3. Cognito Authorizer Configuration
+   - Configured Cognito user pool authorizer on API Gateway to protect the /items route (Screenshot: apigateway-cognito-auth.png).
 
-4. Set Up Cognito User Pool and App Client
-   - Created Cognito user pool Lab8UserPool for managing user authentication.
-   - Created an app client with OAuth flows enabled, proper callback URLs, and JWT token issuance.
+4. Lambda Function and IAM Policy
+   - Developed the Lambda function Lab8ApiFunction with code for item creation and retrieval (Screenshot: lambda-user-isolation.png).
+   - Applied a scoped IAM policy to the Lambda execution role to restrict DynamoDB access (Screenshot: lambda-iam-policy.png).
 
-5. Attached Cognito JWT Authorizer to API Gateway
-   - Configured API Gateway to use Cognito JWT authorizer for validating incoming requests.
-   - Scoped authorization to secure the /items routes.
+5. DynamoDB Table Creation
+   - Created DynamoDB table Lab8Items with a primary key id (Screenshot: dynamodb-table-created.png).
 
-6. Configured AWS WAF Web ACL
-   - Created WAF Web ACL protecting the API Gateway from common vulnerabilities like SQLi and XSS.
-   (Note: Due to regional constraints, WAF integration had limitations documented)
+6. Authorization Testing
+   - Tested Lambda function with authorized and unauthorized requests via Postman including JWT tokens (Screenshot: postman_401_unauthorized.png).
 
-7. Scoped IAM Roles
-   - Scoped Lambda execution role to only allow necessary DynamoDB and CloudWatch logging permissions.
+7. AWS WAF Limitation Notice
+   - Documented the regional limitations of AWS WAF in the console, impacting resource association (Screenshot: waf-unavailable-limitation.png).
 
-8. Generated Cognito Tokens with AWS CLI
-   - Used initiate-auth to get JWT access tokens for authenticated API testing.
-
-9. Tested API Calls with Postman
-   - Sent authorized API requests with Bearer tokens in Authorization header.
-   - Documented expected responses and error scenarios (e.g., 401 Unauthorized)
-  
-10. Cleanup
-   - Delete the Lambda function(s) created for the API.
-   - Remove the API Gateway instance(s) used for this lab.
-   - Delete the DynamoDB table(s) created.
-   - Delete the Cognito user pool and any app clients created.
-   - Remove the WAF Web ACLs and associated rules.
-   - Delete any IAM roles or custom policies created specifically for this lab.
-
+8. Cleanup
+   - Removed all AWS resources created for the lab, including Lambda functions, API Gateway, DynamoDB table, Cognito user pool and WAF configurations to avoid ongoing charges.
+     
 ---
 
 ## Screenshots
@@ -131,26 +114,6 @@ In modern cloud applications, securing serverless APIs is critical to prevent un
 | 7    | cognito-userpool.png           | Cognito user pool and app client setup with OAuth flows           |
 | 8    | postman-401-unauthorized.png   | Postman request with invalid token showing 401 Unauthorized error |
 | 9    | waf-unavailable-limitation.png | AWS WAF console showing limitations due to regional constraints   |
-
-## Screenshot Explanations
-
-1. dynamodb-table-created.png: Shows the DynamoDB table setup with the partition key configuration for storing items.
-
-2. lambda-iam-policy.png: Displays the IAM policy attached to the Lambda execution role, demonstrating scoped permissions.
-
-3. lambda-user-isolation.png: Shows Lambda function code with user input isolation and basic validation logic.
-
-4. apigateway-cognito-auth.png: API Gateway console screenshot showing Cognito JWT authorizer attached to routes for securing the API.
-
-5. apigateway-routes.png: Configuration of API Gateway routes for GET and POST methods under the /items resource.
-
-6. apigateway-stage-url.png: Deployed API Gateway stage URL used for invoking the Lambda-backed API.
-
-7. cognito-userpool.png: Cognito User Pool and App Client settings showing OAuth flows and client configurations.
-
-8. postman-401-unauthorized.png: Postman request with Authorization header returning a 401 Unauthorized response, indicating security enforcement.
-
-9. waf-unavailable-limitation.png: AWS WAF console screenshot showing regional limitation message preventing full WAF integration.
 
 ---
 
