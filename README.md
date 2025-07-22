@@ -7,6 +7,8 @@ Secure Serverless Application with Lambda, API Gateway, Cognito and WAF.
 ## Table of Contents
 
 - [Overview]
+- [What I Built]
+- [Real-World Risk]
 - [Diagram]
 - [Objectives]
 - [Steps Performed]
@@ -19,6 +21,7 @@ Secure Serverless Application with Lambda, API Gateway, Cognito and WAF.
   - [7. Scoped IAM Roles]
   - [8. Generated Cognito Tokens with AWS CLI]
   - [9. Tested API Calls with Postman]
+  - [10. Cleanup]
 - [Screenshots]
 - [Known Limitations]
 - [Lessons Learned]
@@ -30,6 +33,24 @@ Secure Serverless Application with Lambda, API Gateway, Cognito and WAF.
 ## Overview
 
 In this lab, you built a secure serverless application on AWS using Lambda, API Gateway, DynamoDB, Amazon Cognito, and AWS WAF. You configured authentication and authorization with Cognito user pools, protected your API with WAF, and implemented fine-grained IAM policies. The lab demonstrates best practices for securing serverless apps.
+
+---
+
+## Real-World Risk
+
+In modern cloud applications, securing serverless APIs is critical to prevent unauthorized access and data breaches. This lab addresses real-world risks such as unauthorized users invoking backend Lambda functions, which could lead to data exposure or manipulation. It mitigates common web exploits like SQL injection and cross-site scripting by integrating AWS WAF as a protective firewall. The use of fine-grained IAM roles ensures least privilege access, limiting the potential attack surface by restricting permissions only to what is strictly necessary. Additionally, securing API Gateway endpoints with Cognito authentication and JWT tokens prevents public exposure of sensitive resources, safeguarding both the application and its data from malicious actors.
+
+---
+
+## What I Built 
+
+- A secure serverless API application using:
+  - AWS Lambda (Python/Node.js) running backend code.
+  - API Gateway serving RESTful endpoints with Cognito-based JWT authentication.
+  - DynamoDB NoSQL table for data persistence with scoped access.
+  - AWS WAF protecting API Gateway from common web exploits.
+  - IAM roles with least privilege scoped to Lambda and DynamoDB.
+- Comprehensive documentation including architecture diagram, code, and test screenshots.
 
 ---
 
@@ -73,7 +94,7 @@ In this lab, you built a secure serverless application on AWS using Lambda, API 
 
 6. Configured AWS WAF Web ACL
    - Created WAF Web ACL protecting the API Gateway from common vulnerabilities like SQLi and XSS.
-   (Note: Due to regional constraints, WAF integration had limitations documented.)
+   (Note: Due to regional constraints, WAF integration had limitations documented)
 
 7. Scoped IAM Roles
    - Scoped Lambda execution role to only allow necessary DynamoDB and CloudWatch logging permissions.
@@ -83,7 +104,15 @@ In this lab, you built a secure serverless application on AWS using Lambda, API 
 
 9. Tested API Calls with Postman
    - Sent authorized API requests with Bearer tokens in Authorization header.
-   - Documented expected responses and error scenarios (e.g., 401 Unauthorized).
+   - Documented expected responses and error scenarios (e.g., 401 Unauthorized)
+  
+10. Cleanup
+   - Delete the Lambda function(s) created for the API.
+   - Remove the API Gateway instance(s) used for this lab.
+   - Delete the DynamoDB table(s) created.
+   - Delete the Cognito user pool and any app clients created.
+   - Remove the WAF Web ACLs and associated rules.
+   - Delete any IAM roles or custom policies created specifically for this lab.
 
 ---
 
