@@ -7,8 +7,8 @@ Secure Serverless Application with Lambda, API Gateway, Cognito and WAF.
 ## Table of Contents
 
 - [Overview]
-- [What I Built]
 - [Real-World Risk]
+- [What I Built]
 - [Diagram]
 - [Objectives]
 - [Steps Performed]
