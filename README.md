@@ -101,7 +101,7 @@ In modern cloud applications, securing serverless APIs is critical to prevent un
 
 ## Screenshots
 
-*All screenshots are included in the screenshots/ folder.
+*All screenshots are included in the screenshots/ folder.*
 
 | Step | Filename                       | Description                                                       |
 | ---- | ------------------------------ | ----------------------------------------------------------------- |
