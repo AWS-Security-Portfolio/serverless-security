@@ -145,17 +145,10 @@ In modern cloud applications, securing serverless APIs is critical to prevent un
 
 ## References
 
-- Amazon Cognito User Pools
-  (https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools.html)
-
-- API Gateway JWT Authorizers
-  (https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html)
-
-- AWS WAF Overview
-  (https://aws.amazon.com/waf/)
-
-- AWS Lambda Security Best Practices
-  (https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html)
+- [Amazon Cognito User Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools.html)
+- [API Gateway JWT Authorizers](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html)
+- [AWS WAF Overview](https://aws.amazon.com/waf/)
+- [AWS Lambda Security Best Practices](https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html)
 
 ---
 
