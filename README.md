@@ -152,4 +152,6 @@ In modern cloud applications, securing serverless APIs is critical to prevent un
 
 ---
 
-Sebastian Silva C. - July, 2025 - Berlin, Germany.
+Sebastian Silva C. – July 2025 – Berlin, Germany.
+- [LinkedIn](https://www.linkedin.com/in/sebastiansilc/)
+- [GitHub](https://github.com/SebaSilC)
