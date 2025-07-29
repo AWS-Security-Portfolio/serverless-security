@@ -1,4 +1,4 @@
-## AWS Serverless Security Lab 8
+## AWS Serverless Security Lab
 
 Secure Serverless Application with Lambda, API Gateway, Cognito and WAF.
 
