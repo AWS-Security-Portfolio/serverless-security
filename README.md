@@ -6,12 +6,12 @@ Secure Serverless Application with Lambda, API Gateway, Cognito and WAF.
 
 ## Table of Contents
 
-- [Overview]
-- [Real-World Risk]
-- [What I Built]
-- [Diagram]
-- [Objectives]
-- [Steps Performed]
+- [Overview](#overview)
+- [Real-World Risk](#real-world-risk)
+- [What I Built](#what-i-built)
+- [Diagram](#diagram)
+- [Objectives](#objectives)
+- [Steps Performed](#steps-performed)
   - [1. API Gateway Setup]
   - [2. Cognito User Pool Setup]
   - [3. Cognito Authorizer Configuration]
@@ -20,11 +20,11 @@ Secure Serverless Application with Lambda, API Gateway, Cognito and WAF.
   - [6. Authorization Testing]
   - [7. AWS WAS Limitation Notice]
   - [8. Cleanup]
-- [Screenshots]
-- [Known Limitations]
-- [Lessons Learned]
-- [Authentication Troubleshooting]
-- [References]
+- [Screenshots](#screenshots)
+- [Known Limitations](#known-limitations)
+- [Lessons Learned](#lessons-learned)
+- [Authentication Troubleshooting](#authentication-troubleshooting)
+- [References](#references)
 
 --- 
 
