@@ -25,6 +25,7 @@ Secure Serverless Application with Lambda, API Gateway, Cognito and WAF.
 - [Lessons Learned](#lessons-learned)
 - [Authentication Troubleshooting](#authentication-troubleshooting)
 - [References](#references)
+- [Contact](#contact)
 
 --- 
 
@@ -152,6 +153,7 @@ In modern cloud applications, securing serverless APIs is critical to prevent un
 
 ---
 
-Sebastian Silva C. – July 2025 – Berlin, Germany.
-- [LinkedIn](https://www.linkedin.com/in/sebastiansilc/)
-- [GitHub](https://github.com/SebaSilC)
+## Contact
+
+Sebastian Silva C. – July, 2025 – Berlin, Germany.  
+[LinkedIn](https://www.linkedin.com/in/sebastiansilc) | [GitHub](https://github.com/SebaSilC) | [sebastian@playbookvisualarts.com](mailto:sebastian@playbookvisualarts.com)
