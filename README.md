@@ -102,7 +102,7 @@ In modern cloud applications, securing serverless APIs is critical to prevent un
 
 ## Screenshots
 
-*All screenshots are included in the screenshots/ folder.*
+*All screenshots are included in the `screenshots/` folder.*
 
 | Step | Filename                       | Description                                                       |
 | ---- | ------------------------------ | ----------------------------------------------------------------- |
@@ -157,4 +157,5 @@ In modern cloud applications, securing serverless APIs is critical to prevent un
 
 Sebastian Silva C. – July, 2025 – Berlin, Germany.  
 [LinkedIn](https://www.linkedin.com/in/sebastiansilc) | [GitHub](https://github.com/SebaSilC) | [sebastian@playbookvisualarts.com](mailto:sebastian@playbookvisualarts.com)
+
 
