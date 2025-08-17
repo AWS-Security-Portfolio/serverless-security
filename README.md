@@ -73,27 +73,27 @@ In modern cloud applications, securing serverless APIs is critical to prevent un
 ## Steps Performed
 
 **1. API Gateway Setup**
-   - Created a REST API named Lab8Api with routes /items supporting GET and POST methods *(Screenshot: apigateway-routes.png)*
-   - Configured the API Gateway stage for deployment and obtained the stage URL *(Screenshot: apigateway-stage-url.png)*
+   - Created a REST API named Lab8Api with routes /items supporting GET and POST methods *(Screenshot: `apigateway-routes.png`)*
+   - Configured the API Gateway stage for deployment and obtained the stage URL *(Screenshot: `apigateway-stage-url.png`)*
 
 **2. Cognito User Pool Setup**
-   - Created a Cognito user pool for authentication and user management *(Screenshot: cognito-userpool.png)*
+   - Created a Cognito user pool for authentication and user management *(Screenshot: `cognito-userpool.png`)*
 
 **3. Cognito Authorizer Configuration**
-   - Configured Cognito user pool authorizer on API Gateway to protect the /items route *(Screenshot: apigateway-cognito-auth.png)*
+   - Configured Cognito user pool authorizer on API Gateway to protect the /items route *(Screenshot: `apigateway-cognito-auth.png`)*
 
 **4. Lambda Function and IAM Policy**
-   - Developed the Lambda function Lab8ApiFunction with code for item creation and retrieval *(Screenshot: lambda-user-isolation.png)*
-   - Applied a scoped IAM policy to the Lambda execution role to restrict DynamoDB access *(Screenshot: lambda-iam-policy.png)*
+   - Developed the Lambda function Lab8ApiFunction with code for item creation and retrieval *(Screenshot: `lambda-user-isolation.png`)*
+   - Applied a scoped IAM policy to the Lambda execution role to restrict DynamoDB access *(Screenshot: `lambda-iam-policy.png`)*
 
 **5. DynamoDB Table Creation**
-   - Created DynamoDB table Lab8Items with a primary key id *(Screenshot: dynamodb-table-created.png)*
+   - Created DynamoDB table Lab8Items with a primary key id *(Screenshot: `dynamodb-table-created.png`)*
 
 **6. Authorization Testing**
-   - Tested Lambda function with authorized and unauthorized requests via Postman including JWT tokens *(Screenshot: postman_401_unauthorized.png)*
+   - Tested Lambda function with authorized and unauthorized requests via Postman including JWT tokens *(Screenshot: `postman_401_unauthorized.png`)*
 
 **7. AWS WAF Limitation Notice**
-   - Documented the regional limitations of AWS WAF in the console, impacting resource association *(Screenshot: waf-unavailable-limitation.png)*
+   - Documented the regional limitations of AWS WAF in the console, impacting resource association *(Screenshot: `waf-unavailable-limitation.png`)*
 
 **8. Cleanup**
    - Removed all AWS resources created for the lab, including Lambda functions, API Gateway, DynamoDB table, Cognito user pool and WAF configurations to avoid ongoing charges.
@@ -157,3 +157,4 @@ In modern cloud applications, securing serverless APIs is critical to prevent un
 
 Sebastian Silva C. – July, 2025 – Berlin, Germany.  
 [LinkedIn](https://www.linkedin.com/in/sebastiansilc) | [GitHub](https://github.com/SebaSilC) | [sebastian@playbookvisualarts.com](mailto:sebastian@playbookvisualarts.com)
+
